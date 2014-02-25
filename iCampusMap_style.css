@@ -1,0 +1,105 @@
+html, body {
+        background-color: #C7CFD9;
+        font-family: Verdana,Arial,sans-serif;
+        font-size: 1em;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+h1 {
+        font-size: 2em;
+    }
+#logo {
+        width: 100%;
+        max-width: 190px; 
+    }
+#map {
+        position: absolute;
+        margin-left: 20%;
+        top: 0;
+        right: 0;
+        float: right;
+        width: 80%;
+        height: 100%;
+        padding: 0px;
+    }
+
+
+#results {
+        font-size: 0.9em;
+        overflow: auto; /*scrollbars if needed */
+        /*how to size this so fills to bottom?*/
+        min-height: 5px;
+        max-height: 400px;
+    }
+
+#about {
+        font-size: 0.7em;
+        overflow: auto;
+        min-height: 5px;
+        max-height: 300px;
+        
+    }
+.about-list {
+        list-style: none;
+        margin-left: 0;
+        padding: 0;
+    }
+.about-list li {
+        list-style: none;
+        margin-left: 0;
+    }
+.leaflet-popup-content li {
+        list-style: none;
+    }
+.info {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+.innernav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10px;
+        margin-top: 0;
+        height: 360px;
+}
+.navbar {        
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20%;
+        min-width: 190px;
+        background-color: white;
+        height: 100%;
+        z-index: 100;
+        padding-top: 365px;
+    }
+.smallText {
+        font-size: 0.6em;
+    }
+.mediumText {
+        font-size: 0.8em;
+    }
+.ui-widget {
+        font-size: 0.8em; /* font size in autocomplete dropdown box */
+        max-width: 90%;
+    }	
+.ui-autocomplete {
+        max-height: 200px; /* set height of scroll area */
+        max-width: 200px; /* set width of the scroll area */
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+    }
+.ui-autocomplete-category {
+        font-weight: bold;
+        padding: .2em .4em;
+        margin: .8em 0 .2em;
+        line-height: 1.5;
+  }

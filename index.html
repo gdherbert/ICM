@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>NIU Interactive Campus Map</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+	<!-- version with no external code dependencies -->
+	<!-- link to css libraries -->
+	<link rel="stylesheet" href="leaflet.css" />
+	<link rel="stylesheet" href="smoothness-jquery-ui.css">
+	
+	<!-- link to internal css libraries -->
+	<link rel="stylesheet" href="iCampusMap_style.css" />
+	
+	<!-- link to javascript libraries -->
+	<script src="jquery-1.10.2.min.js"></script>
+	<script src="jquery-ui.js"></script>
+    <script src="leaflet05.js"></script>
+	<script src="jQuery.XDomainRequest.js"></script>
+	<!-- link to own javascript -->
+	<script src="iCampusMap.js" charset="UTF-8"></script>
+	<script src="iCampusMapJson.js" charset="UTF-8"></script>
+	
+	<noscript>Sorry, your browser does not support JavaScript!</noscript>
+</head>
+
+<body>
+	<div id="map" >
+	</div>
+	
+	<div id="navbar" class="navbar">
+	
+		<div class="innernav">
+			<a href="http://www.niu.edu"><img id="logo" src="images/NIU_horz_3Clr.png" alt="NIU Logo"></a>
+			<p>NIU Interactive Campus Map Project</p>
+			<p id="about-text" class="smallText">This map was developed as part of the Spring 2013 Geog790 course by Grant Herbert, with OSM contributions by Raitis Bocka and Nicholas Cortellini.</p>
+            <p class="mediumText">Use the Tab or Arrow keys to autocomplete a search, or the Enter key to search as typed</p>
+			
+			<!-- search box and button -->
+			<input class="ui-widget" id="searchNIU" type="text" placeholder="Search the map..." />
+			<!--enter fires this button -->
+			<input id="btnOSMAPI" type="button" value="Search" onclick="searchOSM(); return false"/>
+			
+			<!-- other buttons -->
+			<input id="btnClearAll" type="button" value="Clear" onclick="clearAll()"/>
+			
+			<input id="btnShowAll" type="button" value="Show All Locations" onclick="showAllResultsOnMap()"/>
+            
+        </div>
+		<div id="resultText" class="mediumText">  </div> 
+		<div id="results" class="smallText">  </div> <!--holds search results -->
+		<div id="about"> </div> <!--holds popup results -->
+			
+	</div>
+</body>
+    <script>
+    //window.onload = init;	
+    jQuery(document).ready(initmap());
+    </script>
+</html>
