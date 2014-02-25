@@ -433,7 +433,6 @@ function grabFirstVal(ul) {
 /**** search the OSM data using NOMINATIM API or the MapQuest version.
 modified: code originally from https://github.com/derickr/osm-tools/tree/master/leaflet-nominatim-example
 OSM nominatum api has limits, MapQuest is more forgiving
-both only seem to return up to 10 objects though, not sure why
 *****/
 function searchOSM() {
 	value = document.getElementById("searchNIU").value;	
