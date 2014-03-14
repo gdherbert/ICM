@@ -32,8 +32,8 @@ function createMap() {
 	// Map uses lat/long - NIU 41.936,-88.773
 	map = L.map('map').setView([41.936,-88.773], 15);
 	
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: 'Nominatim Search Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a>, Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'				
+	L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
+		attribution: 'Nominatim Search Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a>, Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>', subdomains: '1234'				
 	}).addTo(map);
 	
 	var overlayOSM = L.geoJson(testNIUJSON, {style: osmJsonStyle, onEachFeature: addPopupContent}).addTo(map);
