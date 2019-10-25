@@ -33,7 +33,7 @@ function createMap() {
 	map = L.map('map').setView([41.936,-88.773], 15);
 	
 	L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
-		attribution: 'Nominatim Search Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a>, Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>', subdomains: '1234'				
+		attribution: 'Nominatim Search Courtesy of <a href="http://www.mapquest.com/" target="_blank">OpenStreetMap</a>, Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>', subdomains: '1234'				
 	}).addTo(map);
 	
 	var overlayOSM = L.geoJson(testNIUJSON, {style: osmJsonStyle, onEachFeature: addPopupContent}).addTo(map);
@@ -443,7 +443,8 @@ function searchOSM() {
 		clearHTML();
 		
 		//return a JSON object
-		var strAPI = "https://open.mapquestapi.com/nominatim/v1/search?&format=json";
+		//var strAPI = "https://open.mapquestapi.com/nominatim/v1/search?&format=json";
+		var strAPI = "https://nominatim.openstreetmap.org/search?&format=json";
 		var query = "&q=" + encodeURIComponent(value);
 		//viewbox format left, top, right, bottom
 		var viewbox = "&viewbox=-88.756,41.948,-88.799,41.930&bounded=1";
